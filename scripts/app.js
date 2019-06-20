@@ -46,7 +46,7 @@ data: {
         ],
       },
       headings: {
-        'genre' : 'カテゴリ',
+        'genre' : 'ジャンル',
         'grade' : '対象',
         'title' : 'タイトル',
         'url' : 'URL',

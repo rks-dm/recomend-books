@@ -27,6 +27,15 @@
     <div id="app" class="container">
       <h1 class="text-center mb-2">推薦図書一覧</h1>
 
+      <div class="card mb-2">
+        <div class="card-body">
+          下記の書籍は、<strong><mark>お薦め順に並んで</mark></strong>います。<br>
+          書籍カテゴリやジャンル、対象などで絞り込んで頂くと、その絞り込み内で各書籍がお薦め順に並びます。<br>
+          ただし、一覧の下の方にある書籍も、<strong><mark>いずれも良書・名著揃い</strong></mark>ですので、ぜひご活用ください。<br>
+          ※一覧最終更新日：2019/6/17
+        </div>
+      </div>
+
       <h4>書籍カテゴリ</h4>
       <select class="form-control" v-model="selectedCategory" @change="applyFilter">
         <option v-for="category in categories" v-bind:value="category">
@@ -35,7 +44,7 @@
       </select>
 
       <v-client-table :columns="columns" :data="books" :options="options">
-        <a slot="url" slot-scope="props" :href="`${props.row.url}`">
+        <a slot="url" slot-scope="props" :href="`${props.row.url}`"  target=”_blank”>
         Link
         </a>
       </v-client-table>
